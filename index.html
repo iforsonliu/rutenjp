@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans:400,700|Noto+Serif:400,400i" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
+    <title>ruten_newpage</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function(){
+
+
+            // 漢堡滑出
+            $("#iconFrame").click(function(){
+                $(".mobileMenu").animate({left:'0%'},500);
+            });
+
+            $(".back").click(function(){
+                $(".mobileMenu").animate({left:'-100%'},500);
+            });
+
+
+            //篩選動態
+            $(document).ready(function(){
+            $(".custom-select").each(function() {
+            var classes = $(this).attr("class"),
+                id      = $(this).attr("id"),
+                name    = $(this).attr("name");
+            var template =  '<div class="' + classes + '">';
+                template += '<span class="custom-select-trigger">' + $(this).attr("placeholder") + '</span>';
+                template += '<div class="custom-options">';
+                $(this).find("option").each(function() {
+                    template += '<span class="custom-option ' + $(this).attr("class") + '" data-value="' + $(this).attr("value") + '">' + $(this).html() + '</span>';
+                });
+            template += '</div></div>';
+            
+            $(this).wrap('<div class="custom-select-wrapper"></div>');
+            $(this).hide();
+            $(this).after(template);
+            });
+            $(".custom-option:first-of-type").hover(function() {
+            $(this).parents(".custom-options").addClass("option-hover");
+            }, function() {
+            $(this).parents(".custom-options").removeClass("option-hover");
+            });
+            $(".custom-select-trigger").on("click", function() {
+            $('html').one('click',function() {
+                $(".custom-select").removeClass("opened");
+            });
+            $(this).parents(".custom-select").toggleClass("opened");
+            event.stopPropagation();
+            });
+            $(".custom-option").on("click", function() {
+            $(this).parents(".custom-select-wrapper").find("select").val($(this).data("value"));
+            $(this).parents(".custom-options").find(".custom-option").removeClass("selection");
+            $(this).addClass("selection");
+            $(this).parents(".custom-select").removeClass("opened");
+            $(this).parents(".custom-select").find(".custom-select-trigger").text($(this).text());
+            });
+
+        });	
+
+            
+
+            
+
+
+
+				
+
+	
+
+
+				
+	    });	
+
+
+
+    </script>
+
+   
+</head>
+<body>
+
+
+    <div class="mobileMenu">
+		<ul>
+            <h1>店舖類別</h1>
+            <!-- <label for="menuControl_back"> -->
+                <div class="back">
+                        <i class="fas fa-arrow-left"></i>
+
+
+                </div>
+            <!-- </label> -->
+            <br>
+            <hr>
+            <a href="#"><span><li>流行時尚</li></span></a>
+            <a href="#"><span><li>鞋子/包包</li></span></a>
+            <a href="#"><span><li>室內傢俱</li></span></a>
+            <a href="#"><span><li>雜貨、文具、廚房</li></span></a>
+            <a href="#"><span><li>食品</li></span></a>
+            <a href="#"><span><li>水、飲料、清酒</li></span></a>
+            <a href="#"><span><li>美容、化妝品、健康</li></span></a>
+            <a href="#"><span><li>家電、照相機、音響</li></span></a>
+            <a href="#"><span><li>電腦、手機、周邊</li></span></a>
+            <a href="#"><span><li>書籍、音樂、DVD</li></span></a>
+            <a href="#"><span><li>遊戲、玩具、愛好</li></span></a>
+            <a href="#"><span><li>運動、戶外休閒</li></span></a>
+            <a href="#"><span><li>園藝、DIY</li></span></a>
+            <a href="#"><span><li>寵物用品</li></span></a>
+            <a href="#"><span><li>孩子、寶貝、孕婦</li></span></a>
+            <a href="#"><span><li>汽機車</li></span></a>
+            <a href="#"><span><li>其他服務</li></span></a>
+			
+		</ul>
+				
+				
+    </div>
+    
+   
+
+    <header class="l-header">
+
+        <!-- <label  for="menuControl"> -->
+
+            <div id="iconFrame">
+                <div id="nav-icon4">
+                <span></span>
+                <span></span>
+                <span></span>
+                </div>
+
+
+            </div>
+	
+	    <!-- </label> -->
+
+        <div class="l-container">
+          <a href="/" class="link-home" title="回到露天拍賣"><img src="images/logo-ruten.png" class="logo-ruten" alt="露天拍賣"></a>
+          <a class="btn_header" href="https://ecshweb.pchome.com.tw/search/v3.3/?q="><img src="images/btn2.png" alt=""></a>
+          <a href="../notice/index.html" class="link-notice"><i class="fas fa-chevron-circle-right"></i>海外代購說明</a>
+        </div>
+
+    </header>
+
+    <div class="right_category">
+        <div class="title">
+            <div class="icon">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <h1>店舖類別</h1>
+           
+        </div>
+        <div class="content">
+            <ul>
+
+                
+               <a href="#"><li>流行時尚</li></a>
+               <a href="#"><li>鞋子/包包</li></a>
+               <a href="#"><li>室內傢俱</li></a>
+               <a href="#"><li>雜貨、文具、廚房</li></a>
+               <a href="#"><li>食品</li></a>
+               <a href="#"><li>水、飲料、清酒</li></a>
+               <a href="#"><li>美容、化妝品、健康</li></a>
+               <a href="#"><li>家電、照相機、音響</li></a>
+               <a href="#"><li>電腦、手機、周邊</li></a>
+               <a href="#"><li>書籍、音樂、DVD</li></a>
+               <a href="#"><li>遊戲、玩具、愛好</li></a>
+               <a href="#"><li>運動、戶外休閒</li></a>
+               <a href="#"><li>園藝、DIY</li></a>
+               <a href="#"><li>寵物用品</li></a>
+               <a href="#"><li>孩子、寶貝、孕婦</li></a>
+               <a href="#"><li>汽機車</li></a>
+               <a href="#"><li>其他服務</li></a>
+               
+               
+                
+               
+               
+
+               
+            </ul>
+        </div>
+
+
+    </div>
+
+      <div class="l-background">
+
+            <div class="bg-light"></div>
+            <div class="bg-wave"></div>
+
+      </div>
+
+        <div class="contain">
+            <div class="banner"> 
+                <div class="ad1">
+                    <a href="#">
+                        <img src="images/logo-ponpare.png" alt="">
+                    </a>    
+                </div>
+                <div class="ad2">
+                    <span >店舖類別</span>
+                    <select class="pretty-select">
+                        <option value="">請選擇</option>
+                        <option value="">222</option>
+                        <option value="">333</option>
+                        <option value="">444</option>
+                        <option value="">555</option>
+                    </select>
+                </div>
+            </div>
+
+
+            <div class="product_bg">
+                <div class="product">
+                    <div class="head">
+                        <div class="left">
+                            <span class="color"></span>
+                            <span class="name">流行時尚</span>  
+                        </div>
+
+                        <div class="center">
+                                <select name="sources" id="sources" class="custom-select sources" placeholder="篩選條件">
+                                  <option value="profile">男裝服飾1</option>
+                                  <option value="word">男裝服飾2</option>
+                                  <option value="hashtag">男裝服飾3</option>
+                                  <option value="hashtag">男裝服飾4</option>
+                                  <option value="hashtag">男裝服飾5</option>
+                                  <option value="hashtag">男裝服飾6</option>
+                                </select>
+                        </div>
+
+                        <div class="right">
+                            <a class="btn" href="#">男裝</a>
+                            <a class="btn" href="#">男裝</a>
+                            <a class="btn" href="#">男裝</a>
+                            <a class="btn" href="#">男裝</a>
+                        </div>
+
+                    </div>
+
+                    <div class="product_content">
+
+                                                   
+                            <div class="item"> 
+
+                                <a href="#">  
+                                        
+                                        <div class="picture">
+                                            <img src="images/life_1.png" alt="">
+                                        </div>
+                                        <div class="text">
+                            
+                                                <span class="category">女性時尚</span>
+                                                <p class="word">我是店鋪名稱我是店鋪名稱</p>
+                                            
+                                            
+                                                <span class="star"></span><span class="rate">4.4</span>
+                                        
+
+                                        </div>
+                                </a>   
+                               
+                            </div>  
+                         
+                            <div class="item"> 
+                                
+                                <div class="picture">
+                                    <img src="images/life_1.png" alt="">
+                                </div>
+                                <div class="text">
+                      
+                                        <span class="category">女性時尚</span>
+                                        <p class="word">我是店鋪名稱我是店鋪名稱</p>
+                                    
+                                    
+                                        <span class="star"></span><span class="rate">4.4</span>
+                                
+
+                                </div>
+                               
+                            </div>
+
+                            <div class="item"> 
+                                
+                                <div class="picture">
+                                    <img src="images/life_1.png" alt="">
+                                </div>
+                                <div class="text">
+                      
+                                        <span class="category">女性時尚</span>
+                                        <p class="word">我是店鋪名稱我是店鋪名稱</p>
+                                    
+                                    
+                                        <span class="star"></span><span class="rate">4.4</span>
+                                
+
+                                </div>
+                               
+                            </div>
+
+                            <div class="item"> 
+                                
+                                <div class="picture">
+                                    <img src="images/life_1.png" alt="">
+                                </div>
+                                <div class="text">
+                      
+                                        <span class="category">女性時尚</span>
+                                        <p class="word">我是店鋪名稱我是店鋪名稱</p>
+                                    
+                                    
+                                        <span class="star"></span><span class="rate">4.4</span>
+                                
+
+                                </div>
+                               
+                            </div>
+
+
+                            <div class="item"> 
+                                
+                                <div class="picture">
+                                    <img src="images/life_1.png" alt="">
+                                </div>
+                                <div class="text">
+                      
+                                        <span class="category">女性時尚</span>
+                                        <p class="word">我是店鋪名稱我是店鋪名稱</p>
+                                    
+                                    
+                                        <span class="star"></span><span class="rate">4.4</span>
+                                
+
+                                </div>
+                               
+                            </div>
+
+
+                            <div class="item"> 
+                                
+                                <div class="picture">
+                                    <img src="images/life_1.png" alt="">
+                                </div>
+                                <div class="text">
+                      
+                                        <span class="category">女性時尚</span>
+                                        <p class="word">我是店鋪名稱我是店鋪名稱</p>
+                                    
+                                    
+                                        <span class="star"></span><span class="rate">4.4</span>
+                                
+
+                                </div>
+                               
+                            </div>
+
+                            <div class="item"> 
+                                
+                                <div class="picture">
+                                    <img src="images/life_1.png" alt="">
+                                </div>
+                                <div class="text">
+                      
+                                        <span class="category">女性時尚</span>
+                                        <p class="word">我是店鋪名稱我是店鋪名稱</p>
+                                    
+                                    
+                                        <span class="star"></span><span class="rate">4.4</span>
+                                
+
+                                </div>
+                               
+                            </div>
+
+
+                            <div class="item"> 
+                                
+                                <div class="picture">
+                                    <img src="images/life_1.png" alt="">
+                                </div>
+                                <div class="text">
+                      
+                                        <span class="category">女性時尚</span>
+                                        <p class="word">我是店鋪名稱我是店鋪名稱</p>
+                                    
+                                    
+                                        <span class="star"></span><span class="rate">4.4</span>
+                                
+
+                                </div>
+                               
+                            </div>
+
+
+                            <div class="item"> 
+                                
+                                <div class="picture">
+                                    <img src="images/life_1.png" alt="">
+                                </div>
+                                <div class="text">
+                      
+                                        <span class="category">女性時尚</span>
+                                        <p class="word">我是店鋪名稱我是店鋪名稱</p>
+                                    
+                                    
+                                        <span class="star"></span><span class="rate">4.4</span>
+                                
+
+                                </div>
+                               
+                            </div>
+
+
+                        <a href="#">
+                        <span class="more">看更多店舖</span>
+                        <i class="fas fa-angle-down"></i>
+                        
+                         </a>
+                        
+
+                        
+
+                        
+                        
+                       
+                    </div>
+                    
+
+                </div>
+
+                
+
+
+            </div>
+           
+
+
+            
+        </div>
+
+    
+    
+</body>
+</html>
